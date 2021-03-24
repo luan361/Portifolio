@@ -1,25 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
 
-:root{
+:root {
     --font-primary:"Baloo Da 2",serif;
     --font-secundary:"Josefin Slab",serif;
     --font-action:"Mulish",serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .hamburguer{
-    /*background-color: red;*/
+    /* background-color: red; */
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 151;
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -34,14 +38,14 @@
 
 .line{
     width: 100%;
-    height: .1rem;
+    height: 0.1rem;
     background-color: #fff;
     box-shadow: 0.1rem 0.1rem 1px #000;
     transition: transform 1s;
 }
 
 .show-menu #line1{
-    transform: rotate(45deg) translate(.3rem,.45rem);
+    transform: rotate(45deg) translate(0.3rem,0.45rem);
 }
 
 .show-menu #line2{
@@ -50,7 +54,7 @@
 }
 
 .show-menu #line3{
-    transform: rotate(-45deg) translate(.3rem, -.45rem);
+    transform: rotate(-45deg) translate(0.3rem, -0.45rem);
 }
 
 .hamburguer span{
@@ -70,10 +74,10 @@
 .hamburguer span::before{
     content: "";
     position: absolute;
-    border-right: .5rem solid #a044ff;
-    border-top: .5rem solid transparent;
-    border-left: .5rem solid transparent;
-    border-bottom: .5rem solid transparent;
+    border-right: 0.5rem solid #a044ff;
+    border-top: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
     left: -1rem;
 }
 
@@ -92,7 +96,7 @@ header{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-color: rgba(0, 0, 0,.8);
+    background-color: rgba(0, 0, 0,0.8);
 }
 
 .img-wrapper img{
@@ -123,7 +127,7 @@ header{
     font-size: 3.5rem;
     font-family: var(--font-primary);
     font-weight: 200;
-    text-shadow: .2rem .3rem 2px rgba(0, 0, 0, 0.4);
+    text-shadow: 0.2rem 0.3rem 2px rgba(0, 0, 0, 0.4);
     line-height: 3.5rem;
     margin-bottom: 2rem;
     opacity: 0;
@@ -132,9 +136,9 @@ header{
 
 .banner p{
     font-family: var(--font-secundary);
-    color: #ffffff;
+    color: #fff;
     font-size: 2rem;
-    text-shadow: .2rem .2rem rgba(0, 0, 0, .4);
+    text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
     margin-bottom: 2rem;
     opacity: 0;
     animation: moveBanner 1s 0.7s forwards;
@@ -144,7 +148,7 @@ header{
     font-family: var(--font-action);
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: .1;
+    letter-spacing: 0.1;
     background: #9D50BB;
     background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);
     background: linear-gradient(to left, #6E48AA, #9D50BB); 
@@ -178,6 +182,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 80;
 }
 
 .show-menu .sidebar{
@@ -204,7 +209,7 @@ header{
 }
 
 .menu-link:hover{
-    color: #6a3093;
+    color: #9D50BB;
 }
 
 .social-media{
@@ -216,7 +221,7 @@ header{
 }
 
 .social-media i{
-    background-color: #6a3093;
+    background-color: #9D50BB;
     color: rgba(255, 255, 255, 1);
     height: 2.5rem;
     width: 2.5rem;
@@ -233,10 +238,11 @@ header{
 }
 
 .conhecimentos{
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: repeat(6,6rem);
-    row-gap: .5rem;
+    row-gap: 0.5rem;
 }
 
 .conhecimento:nth-child(1){
@@ -271,6 +277,7 @@ header{
 
 .sessao-conhecimentos{
     background-color: #f5f5f5;
+    height: 100%;
 }
 
 .sessao-header{
@@ -295,7 +302,6 @@ header{
 
 .conhecimento-header i{
     font-size: 2.5rem;
-    width: 3rem;
 }
 
 .conhecimentos-header h3{
@@ -312,17 +318,19 @@ header{
 .conhecimentos-img-wrapper{
     grid-column: 7/11;
     grid-row: 2 / 6;
-    width: 100%;
+    width: 80%;
+    height: 80%;
 }
 
 .conhecimentos-img-wrapper img{
     object-fit: cover;
-    width: 100%;
+    height: 100%;
 }
 
 .projetos{
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 2rem;
 }
 
 .card{
@@ -335,20 +343,20 @@ header{
     width: 100%;
     height: 100%;
     background-color: #262626;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
 }
 
 .card-img-wrapper img{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: .8;
-    border-radius: .8rem;
-    transition: opacity .3s;
+    opacity: 0.8;
+    border-radius: 0.8rem;
+    transition: opacity 0.3s;
 }
 
 .card:hover .card-img-wrapper img{
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .card-info{
@@ -357,8 +365,8 @@ header{
     position: absolute;
     bottom: 0;
     padding: 2rem;
-    text-shadow: 0.3 0.2rem 0.3rem rgba(0, 0, 0,0 .4);
-    transition: all .3s;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
+    transition: all 0.3s;
 }
 
 .card-info h2{
@@ -390,17 +398,16 @@ header{
     color: #eee;
     border-radius:.5rem;
     border: none;
-    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
 }
 
 .card-info button{
     width: 8rem;
-    height: 2.5rem;
-    
+    height: 2.5rem;    
 }
 
 .card:hover .card-info{
-    bottom: -1rem;
+    bottom: 2rem;
     opacity: 1;
     visibility: visible;
 }
@@ -463,7 +470,7 @@ header{
     border-bottom: 2px dashed #636363;
     height: 3rem;
     outline: none;
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 
 .input-group textarea{
@@ -476,7 +483,7 @@ header{
     position: absolute;
     left: 0;
     top: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: var(--font-secundary);
     text-transform: uppercase;
     transition: all 0.3s;
@@ -484,7 +491,7 @@ header{
 
 .field:focus ~ label{
     top: 0;
-    font-size: 1rem;
+    font-size: 0.7rem;
 }
 
 .field:focus{
@@ -494,9 +501,17 @@ header{
 .btn-submit{
     font-size: 1.2rem;
     text-transform: uppercase;
-    width: 100%;
-    height: 2rem;
+    width: 80%;
+    height: 2.5rem;
     margin-top: 1rem;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.preenchido{
+    pointer-events: none;
 }
 
 .sessao-orcamento{
@@ -545,7 +560,6 @@ header{
 .sessao-orcamento label{
     font-family: var(--font-secundary);
     font-size: 1.5rem;
-    font-weight: bold;
 }
 
 .sessao-orcamento input[type="number"]{
@@ -564,3 +578,52 @@ header{
     cursor: pointer;
     grid-column: 2;
 }
+
+footer{
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content p{
+    font-family: var(--font-secundary);
+    color: #a7a7a7;
+    font-size: 1.2rem;
+}
+
+.social-list a{
+    margin: 0.2rem;
+    color: #a7a7a7;
+    font-size: 1.3rem;
+}
+
+.social-list ul{
+    display: flex;
+}
+
+#link-topo{
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: #6a3093;
+    background: -webkit-linear-gradient(to right, #6E48AA, #9D50BB);
+    background: linear-gradient(to left, #6E48AA, #9D50BB);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 0.6rem #00000009;
+}
+
