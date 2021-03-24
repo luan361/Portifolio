@@ -4,11 +4,11 @@ document.querySelector(".hamburguer").addEventListener("click", ()=>
 
 document.querySelector("#qtde").addEventListener("change",atualizarPreco)
 document.querySelector("#js").addEventListener("change",atualizarPreco)
-document.querySelector("layout-sim").addEventListener("change",atualizarPreco)
-document.querySelector("layout-nao").addEventListener("change",atualizarPreco)
+document.querySelector("#layout-sim").addEventListener("change",atualizarPreco)
+document.querySelector("#layout-nao").addEventListener("change",atualizarPreco)
 document.querySelector("#prazo").addEventListener("change",function(){
     const prazo = document.querySelector("#prazo").value 
-    document.querySelector("lavel[for=prazo]").innerHTML = `Prazo: ${prazo} semanas`
+    document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} semanas`
     atualizarPreco()
 })
 
